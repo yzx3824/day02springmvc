@@ -10,6 +10,10 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>day02springmvc_01response</module>
+        <module>day02springmvc_02fileupload</module>
+        <module>day02springmvc_03fileupload</module>
+        <module>day02springmvc_04exception</module>
+        <module>day02springmvc_05interceptor</module>
     </modules>
 
 

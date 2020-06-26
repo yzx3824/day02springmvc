@@ -25,7 +25,32 @@
     <mvc:resources location="/images/" mapping="/images/**"/>
     <mvc:resources location="/js/" mapping="/js/**"/>
 
+    <!--配置拦截器-->
+    <mvc:interceptors>
+        <!--配置拦截器-->
+        <mvc:interceptor>
+            <!--要拦截的具体的方法-->
+            <mvc:mapping path="/user/*"/>
+            <!--不要拦截的方法
+            <mvc:exclude-mapping path=""/>
+            -->
+            <!--配置拦截器对象-->
+            <bean class="com.yzx.interceptor.MyInterceptor1" />
+        </mvc:interceptor>
+
+        <!--配置第二个拦截器-->
+        <mvc:interceptor>
+            <!--要拦截的具体的方法-->
+            <mvc:mapping path="/**"/>
+            <!--不要拦截的方法
+            <mvc:exclude-mapping path=""/>
+            -->
+            <!--配置拦截器对象-->
+            <bean class="com.yzx.interceptor.MyInterceptor2" />
+        </mvc:interceptor>
+    </mvc:interceptors>
+
     <!-- 开启SpringMVC框架注解的支持 -->
-    <mvc:annotation-driven/>
+    <mvc:annotation-driven />
 
 </beans>
